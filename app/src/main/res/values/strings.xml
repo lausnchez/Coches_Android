@@ -3,9 +3,10 @@
     <!-- MAIN ACTIVITY-->
     <string name="btn_Main_agregar">Agregar Coches</string>
     <string name="btn_Main_eliminar">Eliminar Coches</string>
-    <string name="btn_Main_leer">Leer Coches</string>
+    <string name="btn_Main_buscar">Buscar Coches</string>
     <string name="btn_Main_actualizar">Actualizar Coches</string>
     <string name="txt_Main_inserteMatricula">Inserte su matrícula</string>
+    <string name="txt_Main_mostrarTodos">Mostrar todos</string>
 
     <!-- AGREGAR / EDITAR ACTIVITY-->
     <string name="btn_Act_agregar">Agregar coche</string>

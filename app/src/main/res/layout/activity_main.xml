@@ -8,65 +8,84 @@
     tools:context=".Activities.MainActivity">
 
     <Button
-        android:id="@+id/btn_actualizar"
-        android:layout_width="350dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="200dp"
-        android:backgroundTint="@color/azul_botones"
-        android:text="@string/btn_Main_actualizar"
-        app:cornerRadius="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btn_leer"
-        android:layout_width="350dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/azul_botones"
-        android:text="@string/btn_Main_leer"
-        app:cornerRadius="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_actualizar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
         android:id="@+id/btn_agregar"
         android:layout_width="350dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="164dp"
         android:backgroundTint="@color/azul_botones"
         android:text="@string/btn_Main_agregar"
         app:cornerRadius="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_eliminar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btn_eliminar"
-        android:layout_width="350dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/azul_botones"
-        android:text="@string/btn_Main_eliminar"
-        app:cornerRadius="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_leer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/et_main_inserteMatricula"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="@string/txt_Main_inserteMatricula"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/btn_agregar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_agregar" />
+
+    <Button
+        android:id="@+id/btn_mostrarTodos"
+        android:layout_width="350dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/azul_botones"
+        android:text="@string/txt_Main_mostrarTodos"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_actualizar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_buscar"
+        android:layout_width="350dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/azul_botones"
+        android:text="@string/btn_Main_buscar"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_eliminar" />
+
+    <Button
+        android:id="@+id/btn_actualizar"
+        android:layout_width="350dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/azul_botones"
+        android:text="@string/btn_Main_actualizar"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_buscar" />
+
+    <Button
+        android:id="@+id/btn_eliminar"
+        android:layout_width="350dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/azul_botones"
+        android:text="@string/btn_Main_eliminar"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_main_inserteMatricula" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
