@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PracticaCoches</string>
+    <!-- MAIN ACTIVITY-->
+    <string name="btn_Main_agregar">Agregar Coches</string>
+    <string name="btn_Main_eliminar">Eliminar Coches</string>
+    <string name="btn_Main_leer">Leer Coches</string>
+    <string name="btn_Main_actualizar">Actualizar Coches</string>
+    <string name="txt_Main_inserteMatricula">Inserte su matrícula</string>
+
+    <!-- AGREGAR / EDITAR ACTIVITY-->
+    <string name="btn_Act_agregar">Agregar coche</string>
+    <string name="btn_Act_actualizar">Actualizar coche</string>
+    <!-- Labels-->
+    <string name="lbl_Act_matricula">Matrícula</string>
+    <string name="lbl_Act_modelo">Modelo</string>
+    <string name="lbl_Act_color">Color</string>
+    <string name="lbl_Act_anio">Año de fabricación</string>
+    <string name="lbl_Act_precio">Precio</string>
+</resources>
