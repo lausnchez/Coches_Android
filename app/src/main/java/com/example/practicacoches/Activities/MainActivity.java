@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.practicacoches.Model.CochesModelo;
 import com.example.practicacoches.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         btn_main_agregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // Toast.makeText(MainActivity.this, "Agregar", Toast.LENGTH_LONG).show();
+                //Toast.makeText(MainActivity.this, "Agregar", Toast.LENGTH_LONG).show();
                 Intent i_agregar = new Intent(MainActivity.this, AgregarEditarActivity.class);
                 startActivity(i_agregar);
             }
@@ -83,5 +84,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        // Manejo de datos
+        CochesModelo listadoCoches = new CochesModelo();
+
     }
 }

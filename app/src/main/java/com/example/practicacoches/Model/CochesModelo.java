@@ -40,7 +40,14 @@ public class CochesModelo {
     public HashMap<String, Coche> getListaCoches(){
         return this.lista_coches;
     }
-    public CochesModelo getInstancia(){ return instancia; }
+
+    // Getter Instancia
+    public static CochesModelo getInstancia(){
+        if(instancia == null){
+            instancia = new CochesModelo();
+        }
+        return instancia;
+    }
     
     public Coche buscarMatricula(String matricula){
         return this.lista_coches.get(matricula);
