@@ -36,6 +36,21 @@ public class CochesModelo {
         }
         return null;
     }
+
+    public boolean editarCoche(String matricula, String modelo, String color, int anio, int precio){
+        this.lista_coches.get(matricula).setModelo(modelo);
+        this.lista_coches.get(matricula).setColor(color);
+        this.lista_coches.get(matricula).setAno_fabricacion(anio);
+        this.lista_coches.get(matricula).setPrecio(precio);
+        // Comprobación
+        if(this.lista_coches.get(matricula).getMatricula().equals(matricula) &&
+                this.lista_coches.get(matricula).getModelo().equals(modelo) &&
+                this.lista_coches.get(matricula).getColor().equals(color) &&
+                this.lista_coches.get(matricula).getAnoFabricacion() == anio &&
+                this.lista_coches.get(matricula).getPrecio() == precio){
+            return true;
+        }else return false;
+    }
     
     public HashMap<String, Coche> getListaCoches(){
         return this.lista_coches;
@@ -56,8 +71,14 @@ public class CochesModelo {
     public Coche eliminaCoche(String matricula){
         return this.lista_coches.remove(matricula);
     }
-    
-    
+
+    // En caso de que se encuentre un coche te lo devuelve, y si no te da null
+    public Coche buscarCoche(String matricula){
+        if(this.lista_coches.containsKey(matricula)){
+            return this.lista_coches.get(matricula);
+        }else return null;
+    }
+
     public boolean serializar(String nombre){
         try {
             FileOutputStream fos = new FileOutputStream(nombre);

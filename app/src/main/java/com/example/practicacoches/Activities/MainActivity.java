@@ -2,6 +2,7 @@ package com.example.practicacoches.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //Toast.makeText(MainActivity.this, "Agregar", Toast.LENGTH_LONG).show();
                 Intent i_agregar = new Intent(MainActivity.this, AgregarEditarActivity.class);
+                i_agregar.putExtra("editar", false);
                 startActivity(i_agregar);
             }
         });
@@ -69,10 +71,17 @@ public class MainActivity extends AppCompatActivity {
         btn_main_actualizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Toast.makeText(MainActivity.this, "Actualizar", Toast.LENGTH_LONG).show();
-                Intent i_actualizar = new Intent(MainActivity.this, AgregarEditarActivity.class);
-                i_actualizar.putExtra("matricula", eT_main_insertarMatricula.getText().toString());
-                startActivity(i_actualizar);
+                if(!eT_main_insertarMatricula.getText().toString().isEmpty()){
+                    if(CochesModelo.getInstancia().buscarCoche(eT_main_insertarMatricula.getText().toString()) == null){
+                        Toast.makeText(MainActivity.this, "No existe esa matrícula en el registro", Toast.LENGTH_SHORT).show();
+                    }else{
+                        // Toast.makeText(MainActivity.this, "Actualizar", Toast.LENGTH_LONG).show();
+                        Intent i_actualizar = new Intent(MainActivity.this, AgregarEditarActivity.class);
+                        i_actualizar.putExtra("matricula", eT_main_insertarMatricula.getText().toString());
+                        i_actualizar.putExtra("editar", true);
+                        startActivity(i_actualizar);
+                    }
+                }else Toast.makeText(MainActivity.this, "Inserte una matrícula", Toast.LENGTH_SHORT).show();
             }
         });
 
