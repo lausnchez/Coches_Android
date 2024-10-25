@@ -7,4 +7,120 @@
     android:layout_height="match_parent"
     tools:context=".Activities.BuscarActivity">
 
+    <TextView
+        android:id="@+id/lbl_bus_anio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/lbl_Act_anio"
+        android:textColor="@color/azul_botones"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_bus_precio"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_bus_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/lbl_Act_color"
+        android:textColor="@color/azul_botones"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_bus_anio"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_bus_matricula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/lbl_Act_matricula"
+        android:textColor="@color/azul_botones"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_bus_modelo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_bus_precio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="325dp"
+        android:text="@string/lbl_Act_precio"
+        android:textColor="@color/azul_botones"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_bus_modelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/lbl_Act_modelo"
+        android:textColor="@color/azul_botones"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_bus_color"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_bus_volver"
+        android:layout_width="213dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/azul_botones"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_bus_precio" />
+
+    <TextView
+        android:id="@+id/lbl_bus_resMat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_bus_resMod"
+        app:layout_constraintStart_toEndOf="@+id/lbl_bus_matricula" />
+
+    <TextView
+        android:id="@+id/lbl_bus_resMod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_bus_resCol"
+        app:layout_constraintStart_toEndOf="@+id/lbl_bus_modelo" />
+
+    <TextView
+        android:id="@+id/lbl_bus_resCol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_bus_resAni"
+        app:layout_constraintStart_toEndOf="@+id/lbl_bus_color" />
+
+    <TextView
+        android:id="@+id/lbl_bus_resAni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_bus_resPre"
+        app:layout_constraintStart_toEndOf="@+id/lbl_bus_anio" />
+
+    <TextView
+        android:id="@+id/lbl_bus_resPre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="325dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lbl_bus_precio" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
